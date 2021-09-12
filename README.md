@@ -4,6 +4,8 @@
 
 The component allows for incrementing a property of the host, or other "upSearched" components. The syntax for updating the host is shown below.
 
+## [Demo](https://codepen.io/bahrus/pen/rNwwVaZ)
+
 ## Example 1:
 
 ```html
