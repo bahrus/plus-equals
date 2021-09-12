@@ -11,7 +11,7 @@
     <d-fine templ-child 
         as=counter-la
         prop-defaults='{
-            "count": "30"
+            "count": 30
         }'
         transform='{
             "span": "count"
@@ -19,10 +19,10 @@
     >
         <template>
             <button part=down data-d=-1>-</button>
-            <plus-equals on=click vft=dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <plus-equals on=click val=target.dataset.d parse-val-as=int to-host prop=count></plus-equals>
             <span part=count></span>
             <button part=up data-d=1>+</button>
-            <plus-equals on=click vft=dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <plus-equals on=click val=target.dataset.d parse-val-as=int to-host prop=count></plus-equals>
             <style>
                 * {
                   font-size: 200%;
