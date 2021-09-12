@@ -1,8 +1,29 @@
 {
   "name": "plus-equals",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Web component that allows for incrementing a property of the host. or other \"upSearched\" components.",
+  "keywords": [
+    "web components",
+    "web component",
+    "custom elements",
+    "custom element",
+    "bind",
+    "dom-bind",
+    "counter"
+  ],
+  "main": "plus-equals.js",
+  "module": "plus-equals.js",
+  "exports": {
+    ".": "./plus-equals.js",
+    "./plus-equals.js": "./plus-equals.js",
+    "./p-e.js": "./p-e.js"
+  },
+  "files": [
+    "p*.*",
+    "types.d.ts",
+    "custom-elements.json"
+  ],
+  "types": "./types.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
@@ -10,7 +31,7 @@
     "doc": "custom-elements-manifest analyze"
   },
   "dependencies": {
-    "pass-up": "0.0.9"
+    "pass-up": "0.0.10"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",

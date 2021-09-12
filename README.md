@@ -2,7 +2,7 @@
 
 "plus-equals", or "p-e" for short, is one of the components that make up the p-et-alia framework of web components.
 
-The component allows for incrementing the host (or other "upSearched" components). The syntax for updating the host is shown below
+The component allows for incrementing a property of the host, or other "upSearched" components. The syntax for updating the host is shown below.
 
 ## Example 1:
 
