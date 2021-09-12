@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <counter-la></counter-la>
+    <d-fine templ-child 
+        as=counter-la
+        prop-defaults='{
+            "count": "30"
+        }'
+        transform='{
+            "span": "count"
+        }'
+    >
+        <template>
+            <button part=down data-d=-1>-</button>
+            <plus-equals on=click vft=dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <span part=count></span>
+            <button part=up data-d=1>+</button>
+            <plus-equals on=click vft=dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <style>
+                * {
+                  font-size: 200%;
+                }
+            
+                span {
+                  width: 4rem;
+                  display: inline-block;
+                  text-align: center;
+                }
+            
+                button {
+                  width: 4rem;
+                  height: 4rem;
+                  border: none;
+                  border-radius: 10px;
+                  background-color: seagreen;
+                  color: white;
+                }
+            </style>            
+        </template>
+    </d-fine>
+    <script type=importmap>
+        {
+          "imports": {
+            "xtal-element/": "../node_modules/xtal-element/",
+            "trans-render/": "../node_modules/trans-render/",
+            "on-to-me/": "../node_modules/on-to-me/",
+            "pass-up/": "../node_modules/pass-up/",
+            "d-fine/": "../node_modules/d-fine/",
+            "xodus/": "../node_modules/xodus/"
+          }
+        }
+    </script>
+    <script type=module>
+      import '../plus-equals.js';
+      import 'd-fine/d-fine.js';
+    </script>
+</body>
+</html>
