@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <counter-la></counter-la>
+    <d-fine templ-child 
+        as=counter-la
+        prop-defaults='{
+            "count": 30
+        }'
+        transform='{
+            "span": "count"
+        }'
+    >
+        <template>
+            <button part=down data-d=-1>-</button>
+            <plus-equals on=click val=target.dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <span part=count></span>
+            <button part=up data-d=1>+</button>
+            <plus-equals on=click val=target.dataset.d parse-val-as=int to-host prop=count></plus-equals>
+            <style>
+                * {
+                  font-size: 200%;
+                }
+            
+                span {
+                  width: 4rem;
+                  display: inline-block;
+                  text-align: center;
+                }
+            
+                button {
+                  width: 4rem;
+                  height: 4rem;
+                  border: none;
+                  border-radius: 10px;
+                  background-color: seagreen;
+                  color: white;
+                }
+            </style>            
+        </template>
+    </d-fine>
+    <script type=module crossorigin="anonymous">
+      import 'https://cdn.skypack.dev/plus-equals';
+      import 'https://cdn.skypack.dev/d-fine';
+    </script>
+</body>
+</html>
